@@ -31,17 +31,33 @@ The developer client, available as a library/package in multiple programming lan
 2. **Retrieve Foggl State:** Get the state or value of a foggl in your code.
 3. **Conditional Execution:** Execute code based on the retrieved foggl state/value.
 
-```python
-import foggl
+- **Fetching Feature State:**
 
-foggl.initialize(CLIENT_AUTH)  # Authenticate the client
+  ```python
+  from foggl.client import foggl_state
 
-foggl_state = foggl.get_state("fogglThirtyPercentOff")
+  auth_token = 'your-auth-token'
+  foggl_name = 'your-feature-name'
 
-if foggl_state:
-    # Code block based on foggl state
-    pass
-else:
-    # Alternate code block based on foggl state
-    pass
-```
+  foggl_state = foggl_state(auth_token, foggl_name)
+  
+  if foggl_state:
+    do_something()
+  else:
+    do_something_else()
+
+  ```
+
+- **Fetching Feature Value:**
+
+  ```python
+  from foggl.client import foggl_value
+
+  auth_token = 'your-auth-token'
+  foggl_name = 'your-feature-name'
+
+  foggl_value = foggl_value(auth_token, foggl_name)
+  
+  do_something(foggl_value)
+
+  ```
