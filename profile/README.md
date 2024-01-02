@@ -34,7 +34,7 @@ The developer client, available as a library/package in multiple programming lan
 - **Fetching Feature State:**
 
   ```python
-  from foggl.client import foggl_state
+  from pyfoggl import foggl_state
 
   auth_token = 'your-auth-token'
   foggl_name = 'your-feature-name'
@@ -51,7 +51,7 @@ The developer client, available as a library/package in multiple programming lan
 - **Fetching Feature Value:**
 
   ```python
-  from foggl.client import foggl_value
+  from pyfoggl import foggl_value
 
   auth_token = 'your-auth-token'
   foggl_name = 'your-feature-name'
